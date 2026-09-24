@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  
+  --color-canvas: #faf9f6;
+  --color-canvas-dim: #dbdad7;
+  --color-charcoal: #111111;
+  --color-carbon: #1c1b1b;
+  --color-terracotta: #c04a26;
+  --color-amber-accent: #a83916;
+  --color-border-light: #e5e2dc;
+  --color-border-dark: #262626;
+  --color-muted: #666460;
+  --color-muted-dark: #8c8984;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: light;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom architectural hairline borders */
+.hairline-b {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--color-border-light);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--color-border-light);
+}
+
+.hairline-all {
+  border: 1px solid var(--color-border-light);
+}
+
+.hairline-dark-b {
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.hairline-dark-t {
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.hairline-dark-all {
+  border: 1px solid var(--color-border-dark);
+}
+
+/* Custom cursor indicator for precision editorial feel */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-follower {
+    pointer-events: none;
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+  }
+}
+
+/* Noise overlay for high-end tactile uncoated paper feel */
+.paper-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}

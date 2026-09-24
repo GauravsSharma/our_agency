@@ -1,0 +1,6 @@
+{
+  "name": "G&A STUDIO — Boutique Engineering & Digital Atelier",
+  "description": "A boutique two-person engineering studio crafting high-performance digital products, bespoke web applications, and editorial online storefronts without agency bloat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
