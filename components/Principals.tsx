@@ -29,7 +29,7 @@ export const Principals: React.FC = () => {
             </h2>
           </div>
           <p className="font-sans text-sm sm:text-base text-[#666460] max-w-md font-normal leading-relaxed">
-            Zero account executives or agency middlemen. When you collaborate with G&amp;A
+            Zero account executives or agency middlemen. When you collaborate with Kaelith
             Studio, you speak and scope directly with the software engineers writing your
             production codebase.
           </p>
@@ -53,12 +53,12 @@ export const Principals: React.FC = () => {
 
                 {/* Founder Photo & Name Row */}
                 <div className="flex flex-col sm:flex-row gap-6 items-start mb-6">
-                  {/* Portrait with high-contrast monochrome aesthetic */}
-                  <div className="w-28 h-28 sm:w-36 sm:h-36 shrink-0 border border-[#111111] overflow-hidden bg-[#e5e2dc]">
+                  {/* Portrait — full-width on mobile, fixed square on sm+ */}
+                  <div className="w-full aspect-[4/5] sm:w-36 sm:h-36 sm:aspect-auto shrink-0 border border-[#111111] overflow-hidden bg-[#e5e2dc]">
                     <img
                       src={founder.avatarUrl}
                       alt={founder.name}
-                      className="w-full h-full object-cover object-top grayscale contrast-125 brightness-95 group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
                     />
                   </div>

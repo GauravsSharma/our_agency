@@ -20,11 +20,13 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [classification, setClassification] = useState('Landing Page System');
-  const [budgetRange, setBudgetRange] = useState('$1,500 — $3,000 USD');
+  const [budgetRange, setBudgetRange] = useState('₹5,000 — ₹10,000 INR');
   const [ndaChecked, setNdaChecked] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [ticketId, setTicketId] = useState('');
+
+  const WHATSAPP_NUMBER = '917417124246';
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,6 +39,25 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
       const generatedTicket = `GA-${Math.floor(100000 + Math.random() * 900000)}`;
       setTicketId(generatedTicket);
       setSubmitted(true);
+
+      // Build WhatsApp message with all form details
+      const message = [
+        `🚀 *NEW PROJECT BRIEF — ${generatedTicket}*`,
+        ``,
+        `*Name / Organization:* ${name}`,
+        `*Email:* ${email}`,
+        `*Classification:* ${classification}`,
+        `*Investment Allocation:* ${budgetRange}`,
+        `*NDA Compliant:* ${ndaChecked ? 'Yes ✅' : 'No'}`,
+        ``,
+        `*Scope Specification:*`,
+        customScopeNotes || '(No scope notes provided)',
+        ``,
+        `— Submitted via G&A Studio Website`,
+      ].join('\n');
+
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
       // Trigger celebratory confetti for real client feedback
       confetti({
@@ -93,17 +114,26 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
             {/* Studio Coordinates */}
             <div className="border-t border-[#e5e2dc] pt-6 space-y-3 font-mono text-xs">
               <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
-                <span className="text-[#666460]">DIRECT EMAIL:</span>
+                <span className="text-[#666460]">GAURAV EMAIL:</span>
                 <a
-                  href="mailto:contact@gastudio.in"
+                  href="mailto:gauravsharma16072001@gmail.com"
                   className="text-[#111111] hover:text-[#c04a26] font-semibold"
                 >
-                  contact@gastudio.in
+                  gauravsharma16072001@gmail.com
+                </a>
+              </div>
+              <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
+                <span className="text-[#666460]">AKBAR EMAIL:</span>
+                <a
+                  href="mailto:akbarkh7417@gmail.com"
+                  className="text-[#111111] hover:text-[#c04a26] font-semibold"
+                >
+                  akbarkh7417@gmail.com
                 </a>
               </div>
               <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
                 <span className="text-[#666460]">STUDIO PRESENCE:</span>
-                <span className="text-[#111111]">HAUZ KHAS ENCLAVE, NEW DELHI</span>
+                <span className="text-[#111111]">TAJNAGRI PHASE 1, AGRA</span>
               </div>
               <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
                 <span className="text-[#666460]">TIMEZONE:</span>
@@ -195,9 +225,8 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
                       <option value="Business & Portfolio Site">Business &amp; Portfolio Site</option>
                       <option value="E-Commerce Storefront">E-Commerce Storefront</option>
                       <option value="Web App / SaaS Dashboard">Web App / SaaS Dashboard</option>
-                      <option value="AI Agent & Automation">AI Agent &amp; Automation</option>
-                      <option value="Codebase Modernization / Audit">
-                        Codebase Modernization / Audit
+                      <option value="Redesign, Audit & Retainer">
+                     Redesign, Audit & Retainer
                       </option>
                     </select>
                   </div>
@@ -211,10 +240,10 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
                       onChange={(e) => setBudgetRange(e.target.value)}
                       className="w-full bg-[#faf9f6] border-b border-[#e5e2dc] focus:border-[#111111] px-3 py-2.5 text-sm text-[#111111] font-sans outline-none cursor-pointer"
                     >
-                      <option value="$1,500 — $3,000 USD">$1,500 — $3,000 USD</option>
-                      <option value="$3,000 — $6,000 USD">$3,000 — $6,000 USD</option>
-                      <option value="$6,000 — $12,000 USD">$6,000 — $12,000 USD</option>
-                      <option value="$12,000+ USD">$12,000+ USD</option>
+                      <option value="₹5,000 — ₹10,000 INR">₹5,000 — ₹10,000 INR</option>
+                      <option value="₹10,000 — ₹20,000 INR">₹10,000 — ₹20,000 INR</option>
+                      <option value="₹20,000 — ₹40,000 INR">₹20,000 — ₹40,000 INR</option>
+                      <option value="₹40,000+ INR">₹40,000+ INR</option>
                     </select>
                   </div>
                 </div>
@@ -276,22 +305,35 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
             )}
 
             {/* Direct communication channels */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
               <a
-                href="mailto:contact@gastudio.in"
+                href="mailto:gauravsharma16072001@gmail.com"
                 className="border border-[#e5e2dc] bg-[#faf9f6] hover:bg-[#ffffff] p-3.5 flex items-center justify-between transition-colors group"
               >
-                <div className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-[#c04a26]" />
-                  <span className="font-mono text-xs text-[#111111]">contact@gastudio.in</span>
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <Mail className="w-4 h-4 text-[#c04a26] shrink-0" />
+                  <span className="font-mono text-xs text-[#111111] truncate">gauravsharma16072001@gmail.com</span>
                 </div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-[#666460] group-hover:text-[#111111]">
-                  DIRECT EMAIL ↗
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#666460] group-hover:text-[#111111] shrink-0 ml-2">
+                  GAURAV ↗
                 </span>
               </a>
 
               <a
-                href="https://wa.me/919999999999"
+                href="mailto:akbarkh7417@gmail.com"
+                className="border border-[#e5e2dc] bg-[#faf9f6] hover:bg-[#ffffff] p-3.5 flex items-center justify-between transition-colors group"
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <Mail className="w-4 h-4 text-[#c04a26] shrink-0" />
+                  <span className="font-mono text-xs text-[#111111] truncate">akbarkh7417@gmail.com</span>
+                </div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-[#666460] group-hover:text-[#111111] shrink-0 ml-2">
+                  AKBAR ↗
+                </span>
+              </a>
+
+              <a
+                href="https://wa.me/917417124246"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-[#e5e2dc] bg-[#faf9f6] hover:bg-[#ffffff] p-3.5 flex items-center justify-between transition-colors group"

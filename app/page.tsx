@@ -54,7 +54,7 @@ export default function HomePage() {
       .join(', ');
 
     return `[ CALCULATOR SCOPE SUMMARY: ]
-• Target Archetype: ${arch.name} [$${arch.basePrice.toLocaleString()}]
+• Target Archetype: ${arch.name} [₹${arch.basePrice.toLocaleString()}]
 • Scope Count: ${scope.screens} Interactive Views/Screens
 • Add-on Features: ${addonNames || 'None selected'}
 • Design Tier: ${scope.designFramework.toUpperCase()} [${scope.designFramework === 'bespoke' ? '1.0x' : '0.85x'}]
@@ -132,6 +132,12 @@ export default function HomePage() {
     gsap.ticker.add(updateLenis);
     gsap.ticker.lagSmoothing(0);
 
+    // Allow modals to pause / resume Lenis via custom events
+    const handleStop = () => lenis.stop();
+    const handleStart = () => lenis.start();
+    window.addEventListener('lenis:stop', handleStop);
+    window.addEventListener('lenis:start', handleStart);
+
     // Track active section for mobile navigation
     const sections = ['hero', 'services', 'work', 'estimator', 'team', 'contact'];
     const handleScrollTracking = () => {
@@ -170,6 +176,8 @@ export default function HomePage() {
 
     return () => {
       window.removeEventListener('scroll', handleScrollTracking);
+      window.removeEventListener('lenis:stop', handleStop);
+      window.removeEventListener('lenis:start', handleStart);
       ctx.revert();
       lenis.destroy();
       gsap.ticker.remove(updateLenis);

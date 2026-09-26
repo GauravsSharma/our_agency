@@ -1,12 +1,27 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, ExternalLink, X, ShieldCheck, Cpu, Database, Layers } from 'lucide-react';
 import { CASE_STUDIES } from '../data/studioData';
 import { CaseStudy } from '../types';
 
 export const WorkArchive: React.FC = () => {
   const [activeModalStudy, setActiveModalStudy] = useState<CaseStudy | null>(null);
+
+  // Lock body scroll and pause Lenis when modal is open
+  useEffect(() => {
+    if (activeModalStudy) {
+      document.body.style.overflow = 'hidden';
+      window.dispatchEvent(new CustomEvent('lenis:stop'));
+    } else {
+      document.body.style.overflow = '';
+      window.dispatchEvent(new CustomEvent('lenis:start'));
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.dispatchEvent(new CustomEvent('lenis:start'));
+    };
+  }, [activeModalStudy]);
 
   return (
     <section id="work" className="relative w-full border-b border-[#e5e2dc] bg-[#faf9f6]">
@@ -66,7 +81,7 @@ export const WorkArchive: React.FC = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover object-center grayscale contrast-110 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[#111111]/10 group-hover:opacity-0 transition-opacity"></div>
@@ -120,7 +135,7 @@ export const WorkArchive: React.FC = () => {
       {/* Case Study Deep-Dive Architectural Modal */}
       {activeModalStudy && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#111111]/85 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#faf9f6] border border-[#111111] p-6 sm:p-8 shadow-2xl">
+          <div data-lenis-prevent className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto overscroll-contain bg-[#faf9f6] border border-[#111111] p-6 sm:p-8 shadow-2xl">
             {/* Modal Header */}
             <div className="flex items-center justify-between border-b border-[#e5e2dc] pb-4 mb-6">
               <div className="flex items-center gap-3">
@@ -193,6 +208,17 @@ export const WorkArchive: React.FC = () => {
 
             {/* Footer Buttons */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#e5e2dc]">
+              {activeModalStudy.demoUrl && activeModalStudy.demoUrl !== '#' && (
+                <a
+                  href={activeModalStudy.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest px-5 py-2.5 bg-[#111111] text-[#faf9f6] hover:bg-[#c04a26] transition-colors"
+                >
+                  <span>LAUNCH DEMO</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
               <button
                 onClick={() => setActiveModalStudy(null)}
                 className="font-mono text-xs uppercase tracking-widest px-5 py-2.5 border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#faf9f6] transition-colors"

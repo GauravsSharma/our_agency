@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           {/* Studio Brand and Statement (5 cols) */}
           <div className="md:col-span-5 space-y-4">
             <div className="font-display text-2xl font-bold tracking-tight text-[#111111]">
-              G&amp;A STUDIO
+              KAELITH STUDIO
             </div>
             <p className="font-sans text-xs sm:text-sm text-[#666460] leading-relaxed max-w-sm">
               Architectural digital design and engineering atelier crafting monolithic
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
                 CURRENT OCCUPANCY:{' '}
                 <span className="text-[#c04a26] font-semibold">50% [1 ACTIVE SLOT]</span>
               </div>
-              <div>© {new Date().getFullYear()} G&amp;A STUDIO. ALL RIGHTS RESERVED.</div>
+              <div>© {new Date().getFullYear()} KAELITH STUDIO. ALL RIGHTS RESERVED.</div>
             </div>
           </div>
 
@@ -92,13 +92,19 @@ export const Footer: React.FC = () => {
               </span>
               <div className="space-y-2 text-[#666460] leading-relaxed text-[11px]">
                 <a
-                  href="mailto:inquiries@gastudio.in"
+                  href="mailto:gauravsharma16072001@gmail.com"
                   className="block text-[#111111] hover:text-[#c04a26]"
                 >
-                  inquiries@gastudio.in
+                  gauravsharma16072001@gmail.com
                 </a>
-                <div>HAUZ KHAS ENCLAVE</div>
-                <div>NEW DELHI, INDIA — IN</div>
+                <a
+                  href="mailto:akbarkh7417@gmail.com"
+                  className="block text-[#111111] hover:text-[#c04a26]"
+                >
+                  akbarkh7417@gmail.com
+                </a>
+                <div>TAJNAGRI PHASE 1</div>
+                <div>AGRA, INDIA — IN</div>
                 <div>GMT +5:30</div>
               </div>
             </div>
@@ -133,12 +139,12 @@ export const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://read.cv"
+                    href="https://wa.me/917417124246"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-[#111111] inline-flex items-center gap-1"
                   >
-                    <span>READ.CV</span>
+                    <span>WHATSAPP</span>
                     <ArrowUpRight className="w-2.5 h-2.5" />
                   </a>
                 </li>
@@ -160,7 +166,7 @@ export const Footer: React.FC = () => {
 
         {/* Hairline sub-footer */}
         <div className="mt-12 pt-6 border-t border-[#e5e2dc] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-[#666460]">
-          <div>NEW DELHI // REMOTE DIGITAL ATELIER</div>
+          <div>AGRA // REMOTE DIGITAL ATELIER</div>
           <div className="flex items-center gap-4">
             <span>REV: 2.4.0</span>
             <span className="text-[#c04a26]">■ ALL SYSTEMS VERIFIED</span>

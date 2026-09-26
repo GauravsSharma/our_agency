@@ -4,50 +4,45 @@ export const ARCHETYPES: ProjectArchetype[] = [
   {
     id: 'landing_page',
     name: 'LANDING PAGE',
-    basePrice: 1200,
+    basePrice: 3500,
     description: 'High-conversion single-page editorial narrative with tailored interactions.',
     typicalDuration: '1 — 2 WEEKS',
   },
   {
     id: 'business_site',
     name: 'BUSINESS SITE',
-    basePrice: 1800,
+    basePrice: 10000,
     description: 'Multi-view corporate or portfolio digital presence with CMS integration.',
     typicalDuration: '2 — 3 WEEKS',
   },
   {
     id: 'ecommerce_store',
     name: 'E-COMMERCE STORE',
-    basePrice: 2600,
+    basePrice: 15000,
     description: 'Headless storefront with Stripe cart checkout and inventory management.',
     typicalDuration: '3 — 4 WEEKS',
   },
   {
     id: 'webapp_saas',
     name: 'WEB APP / SAAS',
-    basePrice: 4000,
+    basePrice: 20000,
     description: 'Full-stack application with authenticated multi-tenancy and relational DB.',
     typicalDuration: '4 — 6 WEEKS',
   },
   {
     id: 'architectural_redesign',
     name: 'ARCHITECTURAL REDESIGN',
-    basePrice: 1800,
+    basePrice: 10000,
     description: 'Core Web Vitals overhaul, design token modernization, and framework upgrade.',
     typicalDuration: '2 — 3 WEEKS',
   },
 ];
 
 export const ADDONS: AddonOption[] = [
-  { id: 'admin_cms', name: 'Admin Panel / CMS', price: 500, category: 'core' },
-  { id: 'payments_engine', name: 'Payments Integration', price: 450, category: 'core' },
-  { id: 'auth_rbac', name: 'User Login / Auth (RBAC)', price: 350, category: 'core' },
-  { id: 'blog_engine', name: 'Editorial Blog Engine', price: 350, category: 'core' },
-  { id: 'multilingual', name: 'Multi-Language (i18n)', price: 400, category: 'scale' },
-  { id: 'technical_seo', name: 'Full Technical SEO Setup', price: 300, category: 'scale' },
-  { id: 'micro_animations', name: 'Advanced Micro-Animations', price: 350, category: 'scale' },
-  { id: 'rag_chatbot', name: 'Knowledge RAG/AI Chatbot', price: 650, category: 'intelligence' },
-  { id: 'cicd_cloud', name: 'Production CI/CD & Cloud', price: 450, category: 'scale' },
+  { id: 'admin_cms', name: 'Admin Panel / CMS', price: 1500, category: 'core' },
+  { id: 'payments_engine', name: 'Payments Integration', price: 1000, category: 'core' },
+  { id: 'multilingual', name: 'Multi-Language (i18n)', price: 500, category: 'scale' },
+  { id: 'micro_animations', name: 'Advanced Micro-Animations', price: 1000, category: 'scale' }
 ];
 
 export const SERVICES: ServiceItem[] = [
@@ -55,7 +50,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'business_portfolio',
     number: '01',
     title: 'BUSINESS & PORTFOLIO WEBSITES',
-    startingPrice: 'FROM $1,200 USD',
+    startingPrice: 'FROM ₹10,000 INR',
     description: 'Bespoke editorial brand systems and portfolio architectures engineered for maximum conversion, pristine mobile typography, and instantaneous load times.',
     stackTags: ['NEXT.JS', 'TAILWIND CSS', 'FRAMER MOTION'],
     deliverables: [
@@ -70,7 +65,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'ecommerce',
     number: '02',
     title: 'E-COMMERCE STORES',
-    startingPrice: 'FROM $2,200 USD',
+    startingPrice: 'FROM ₹15,000 INR',
     description: 'Custom high-speed storefronts, headless architectures, multi-currency Stripe checkout pipelines, and deterministic real-time inventory management.',
     stackTags: ['SHOPIFY GLOBAL', 'MEDUSA CART', 'WEBHOOKS'],
     deliverables: [
@@ -85,7 +80,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'webapps_saas',
     number: '03',
     title: 'WEB APPS & SAAS DASHBOARDS',
-    startingPrice: 'FROM $3,900 USD',
+    startingPrice: 'FROM ₹20,000 INR',
     description: 'Full-stack platforms, multi-tenant RBAC permissions, WebSocket streaming, reactive analytical ledgers, and resilient transactional databases.',
     stackTags: ['POSTGRESQL', 'PRISMA', 'NODE.JS API'],
     deliverables: [
@@ -97,25 +92,10 @@ export const SERVICES: ServiceItem[] = [
     ],
   },
   {
-    id: 'ai_automation',
-    number: '04',
-    title: 'AI AGENTS & AUTOMATION',
-    startingPrice: 'FROM $2,000 USD',
-    description: 'Deterministic RAG chatbot systems trained on your private organisational corpora with vector search indexing, guardrails, and instant operator escalation.',
-    stackTags: ['GEMINI / OPENAI', 'PINECONE', 'VECTOR RAG'],
-    deliverables: [
-      'Document chunking, vector embedding, and hybrid retrieval',
-      'Strict corporate guardrails to prevent hallucination',
-      'Real-time human operator handoff protocol',
-      'Telemetry dashboard for conversation sentiment & feedback',
-      'Custom embeddable web widget matching your brand aesthetic',
-    ],
-  },
-  {
     id: 'redesign_audit',
     number: '05',
     title: 'REDESIGN, AUDIT & RETAINER',
-    startingPrice: 'FROM $800 / AUDIT',
+    startingPrice: 'FROM ₹1,000 / AUDIT',
     description: 'Monolithic codebase modernizations, sub-second Core Web Vitals optimization, schema microdata SEO compliance, and dedicated engineering support.',
     stackTags: ['REV 1.0017-V005', 'COREWEB.OPS', '[1/3]'],
     deliverables: [
@@ -140,13 +120,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     description: 'Full-fledged e-commerce architecture decomposed into independent microservices: Product catalog, Cart, Order lifecycle, and Dashboard behind a unified API Gateway. Built with Kafka asynchronous events, Redis state caching, and vector search discovery.',
     tags: ['NEXT.JS', 'NODE.JS', 'MONGODB', 'REDIS', 'KAFKA'],
     actionLabel: 'LAUNCH LIVE DEPLOYMENT',
-    imageUrl: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://gaurav-olive.vercel.app/assets/projects/riwaz.png',
     metrics: [
       { label: 'LIGHTHOUSE', value: '99/100' },
       { label: 'CHECKOUT LATENCY', value: '< 240ms' },
       { label: 'CATALOG SCALE', value: '1,400+ SKUs' },
     ],
-    demoUrl: 'https://riwaz-couture.example.com',
+    demoUrl: 'https://riwaz.vercel.app/',
   },
   {
     id: 'syntra',
@@ -159,14 +139,34 @@ export const CASE_STUDIES: CaseStudy[] = [
     description: 'Multi-tenant SaaS application allowing companies to generate embeddable widget bots trained deterministically on custom corporate documentation. Features real-time agent handoff with instant human takeover via low-latency WebSockets.',
     tags: ['NEXT.JS', 'POSTGRESQL', 'SOCKET.IO', 'GEMINI API'],
     actionLabel: 'TEST DEMO ENVIRONMENT',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: 'https://gaurav-olive.vercel.app/assets/projects/syntra.png',
     metrics: [
       { label: 'ACCURACY', value: '99.4%' },
       { label: 'HANDOFF LATENCY', value: '12ms' },
       { label: 'INDEXED CHUNKS', value: '450k+' },
     ],
-    demoUrl: 'https://syntra-ai.example.com',
+    demoUrl: 'https://syntra-one.vercel.app/',
   },
+  {
+  id: 'gaurav_sharma',
+  number: '03 / 03',
+  badge: 'PERSONAL PROJECT',
+  statusText: 'LIVE',
+  isClient: false,
+  title: 'GAURAV SHARMA — DEVELOPER PORTFOLIO',
+  clientSubtitle: 'FULL-STACK DEVELOPER & DIGITAL PRODUCT BUILDER',
+  description:
+    'A bold personal portfolio engineered to showcase full-stack development, modern UI experiences, and production-ready digital products. Built with a focus on clean architecture, performance, and interactive visual storytelling.',
+  tags: ['NEXT.JS', 'FULL-STACK', 'INTERACTIVE UI'],
+  actionLabel: 'VIEW PORTFOLIO',
+  imageUrl: '/developer.png',
+  metrics: [
+    { label: 'TECH STACK', value: '10+' },
+    { label: 'PROJECTS', value: '10+' },
+    { label: 'EXPERIENCE', value: 'FULL-STACK' },
+  ],
+  demoUrl: 'https://gaurav-olive.vercel.app/',
+},
   {
     id: 'marble_inlay',
     number: '03 / 03',
@@ -178,7 +178,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     description: 'Engineered a bespoke international artisan e-commerce storefront. Tailored administrative catalog panel, multi-currency Stripe checkout, and ultra high-resolution asset galleries highlighting Agra marble craftsmanship.',
     tags: ['CUSTOM ADMIN', 'STRIPE GLOBAL', 'ARTISAN SHOWCASE'],
     actionLabel: 'RELAUNCH IN PROGRESS',
-    imageUrl: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+    imageUrl: '/marble.png',
     metrics: [
       { label: 'GLOBAL CURRENCIES', value: '18+' },
       { label: 'ASSET RENDERING', value: '4K Zoom' },

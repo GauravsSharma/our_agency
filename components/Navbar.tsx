@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCalculator, onOpenBrief })
         <div className="flex items-center gap-2 truncate">
           <span className="text-[#c04a26] text-xs">■</span>
           <span className="hidden sm:inline">OCT. 2024 |</span>
-          <span>NEW DELHI // REMOTE</span>
+          <span>AGRA // REMOTE</span>
           <span className="text-[#111111] font-semibold">— {currentTime || '10:27:34 AM'} —</span>
           <span className="hidden md:inline">DIGITAL ATELIER</span>
         </div>
@@ -78,9 +78,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCalculator, onOpenBrief })
             href="#"
             className="group flex items-baseline gap-2 text-xl sm:text-2xl font-bold tracking-tight font-display text-[#111111]"
           >
-            <span>G&amp;A STUDIO</span>
+            <span>KAELITH STUDIO</span>
             <span className="text-xs font-mono font-normal text-[#c04a26] tracking-widest hidden lg:inline">
-              • AVAILABLE Q4/Q1 // NEW DELHI // REMOTE
+              • AVAILABLE Q4/Q1 // AGRA // REMOTE
             </span>
           </a>
         </div>
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCalculator, onOpenBrief })
               className="text-left py-2 border-b border-[#e5e2dc]/50 flex justify-between items-center"
             >
               <span>04 // FOUNDING ENGINEERS</span>
-              <span className="text-xs text-[#666460]">DELHI, IN</span>
+              <span className="text-xs text-[#666460]">AGRA, IN</span>
             </button>
             <button
               onClick={() => scrollToSection('contact')}

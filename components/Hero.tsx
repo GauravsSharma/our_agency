@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToEstimator, onScrollToWork 
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 bg-[#c04a26] inline-block"></span>
                 <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-[#666460]">
-                  MODERN DIGITAL ATELIER // EST. 2024 // NEW DELHI
+                  MODERN DIGITAL ATELIER // EST. 2024 // AGRA
                 </span>
               </div>
 

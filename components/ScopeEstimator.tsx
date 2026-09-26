@@ -149,7 +149,7 @@ export const ScopeEstimator: React.FC<ScopeEstimatorProps> = ({
                           selected ? 'text-[#faf9f6]' : 'text-[#666460]'
                         }`}
                       >
-                        ${arch.basePrice.toLocaleString()}
+                        ₹{arch.basePrice.toLocaleString()}
                       </span>
                     </button>
                   );
@@ -163,7 +163,7 @@ export const ScopeEstimator: React.FC<ScopeEstimatorProps> = ({
                 <span className="text-[#111111] font-semibold">02. TOTAL SCREEN / VIEW SCOPE</span>
                 <span className="text-[#c04a26] font-semibold">
                   {scopeState.screens} {scopeState.screens === 1 ? 'SCREEN' : 'SCREENS'} [
-                  {screenCost === 0 ? 'BASELINE' : `+$${screenCost}`}]
+                  {screenCost === 0 ? 'BASELINE' : `+₹${screenCost}`}]
                 </span>
               </div>
 
@@ -226,7 +226,7 @@ export const ScopeEstimator: React.FC<ScopeEstimatorProps> = ({
                         </span>
                       </div>
                       <span className="font-mono text-[11px] text-[#c04a26] font-semibold">
-                        +${addon.price}
+                        +₹{addon.price}
                       </span>
                     </label>
                   );
@@ -325,8 +325,8 @@ export const ScopeEstimator: React.FC<ScopeEstimatorProps> = ({
                   <span className="font-mono text-[10px] uppercase tracking-widest text-[#8c8984] block mb-1">
                     ESTIMATED INVESTMENT RANGE
                   </span>
-                  <div className="font-display text-4xl sm:text-5xl font-light tracking-tight text-[#faf9f6]">
-                    ${lowEstimate.toLocaleString()} — ${highEstimate.toLocaleString()}
+                  <div className="font-display text-3xl sm:text-4xl font-light tracking-tight text-[#faf9f6]">
+                    ₹{lowEstimate.toLocaleString()} — ₹{highEstimate.toLocaleString()}
                   </div>
                 </div>
 
@@ -355,21 +355,21 @@ export const ScopeEstimator: React.FC<ScopeEstimatorProps> = ({
                   <div className="flex justify-between items-center pb-1 border-b border-[#262626]/60">
                     <span>ARCHETYPE BASE:</span>
                     <span className="text-[#faf9f6]">
-                      {currentArchetype.name} [${currentArchetype.basePrice.toLocaleString()}]
+                      {currentArchetype.name} [₹{currentArchetype.basePrice.toLocaleString()}]
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center pb-1 border-b border-[#262626]/60">
                     <span>SCREEN SCALE:</span>
                     <span className="text-[#faf9f6]">
-                      {scopeState.screens} VIEWS [+{screenCost === 0 ? '$0' : `$${screenCost}`}]
+                      {scopeState.screens} VIEWS [+{screenCost === 0 ? '₹0' : `₹${screenCost}`}]
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center pb-1 border-b border-[#262626]/60">
                     <span>ADD-ON FEATURES:</span>
                     <span className="text-[#faf9f6]">
-                      {String(scopeState.selectedAddons.length).padStart(2, '0')} SELECTED [+$
+                      {String(scopeState.selectedAddons.length).padStart(2, '0')} SELECTED [+₹
                       {addonCost}]
                     </span>
                   </div>

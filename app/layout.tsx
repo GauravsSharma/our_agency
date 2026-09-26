@@ -3,11 +3,11 @@ import * as React from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'G&A STUDIO — Fast, Modern Websites At Fair Fixed Prices',
+  title: 'KAELITH STUDIO — Fast, Modern Websites At Fair Fixed Prices',
   description:
     'A boutique two-person engineering studio crafting high-performance digital products, bespoke web applications, and editorial online storefronts without agency bloat or intermediate friction.',
   openGraph: {
-    title: 'G&A STUDIO — Fast, Modern Websites At Fair Fixed Prices',
+    title: 'KAELITH STUDIO — Fast, Modern Websites At Fair Fixed Prices',
     description:
       'A boutique two-person engineering studio crafting high-performance digital products, bespoke web applications, and editorial online storefronts without agency bloat.',
     type: 'website',
