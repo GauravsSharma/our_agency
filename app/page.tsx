@@ -212,7 +212,7 @@ export default function HomePage() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-[#faf9f6] text-[#111111] font-sans selection:bg-[#111111] selection:text-[#faf9f6] relative paper-grain"
+      className="min-h-screen bg-[#faf9f6] text-[#111111] font-sans selection:bg-[#111111] selection:text-[#faf9f6] relative paper-grain overflow-x-hidden"
     >
       {/* Precision cursor follower for desktop editorial feel */}
       <div

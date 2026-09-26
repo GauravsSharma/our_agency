@@ -93,13 +93,13 @@ export const Footer: React.FC = () => {
               <div className="space-y-2 text-[#666460] leading-relaxed text-[11px]">
                 <a
                   href="mailto:gauravsharma16072001@gmail.com"
-                  className="block text-[#111111] hover:text-[#c04a26]"
+                  className="block text-[#111111] hover:text-[#c04a26] break-all"
                 >
                   gauravsharma16072001@gmail.com
                 </a>
                 <a
                   href="mailto:akbarkh7417@gmail.com"
-                  className="block text-[#111111] hover:text-[#c04a26]"
+                  className="block text-[#111111] hover:text-[#c04a26] break-all"
                 >
                   akbarkh7417@gmail.com
                 </a>

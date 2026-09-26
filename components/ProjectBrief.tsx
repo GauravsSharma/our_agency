@@ -113,20 +113,20 @@ export const ProjectBrief: React.FC<ProjectBriefProps> = ({
 
             {/* Studio Coordinates */}
             <div className="border-t border-[#e5e2dc] pt-6 space-y-3 font-mono text-xs">
-              <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
-                <span className="text-[#666460]">GAURAV EMAIL:</span>
+              <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-[#e5e2dc]/60 gap-0.5">
+                <span className="text-[#666460] shrink-0">GAURAV EMAIL:</span>
                 <a
                   href="mailto:gauravsharma16072001@gmail.com"
-                  className="text-[#111111] hover:text-[#c04a26] font-semibold"
+                  className="text-[#111111] hover:text-[#c04a26] font-semibold break-all"
                 >
                   gauravsharma16072001@gmail.com
                 </a>
               </div>
-              <div className="flex justify-between py-1 border-b border-[#e5e2dc]/60">
-                <span className="text-[#666460]">AKBAR EMAIL:</span>
+              <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-[#e5e2dc]/60 gap-0.5">
+                <span className="text-[#666460] shrink-0">AKBAR EMAIL:</span>
                 <a
                   href="mailto:akbarkh7417@gmail.com"
-                  className="text-[#111111] hover:text-[#c04a26] font-semibold"
+                  className="text-[#111111] hover:text-[#c04a26] font-semibold break-all"
                 >
                   akbarkh7417@gmail.com
                 </a>

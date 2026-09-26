@@ -22,6 +22,12 @@
   color-scheme: light;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html.lenis, html.lenis body {
   height: auto;
 }
